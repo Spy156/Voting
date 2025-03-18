@@ -31,7 +31,7 @@ function App() {
   const [modalType, setModalType] = useState("success");
   const toast = useRef(null);
 
-  const apiUrl = "http://localhost:3001";
+  const apiUrl = process.env.REACT_APP_URL || "https://vote.shravandeepyadav.com";
 
   useEffect(() => {
     fetchProposals();
